@@ -1,0 +1,123 @@
+#VRML_SIM R2023a utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/factory/containers/protos/WoodenBox.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/robots/gctronic/e-puck/protos/E-puck.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/floors/protos/Floor.proto"
+
+WorldInfo {
+  basicTimeStep 16
+}
+Viewpoint {
+  orientation 0.09479274821615076 -0.9930887583691171 -0.06920298321976406 5.693531204749783
+  position -1.659360630047792 -0.02697186991093234 1.16304310868146
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+Floor {
+  size 1 1
+}
+WoodenBox {
+  translation -0.317191 -0.194662 0.05
+  size 0.1 0.1 0.1
+}
+WoodenBox {
+  translation 0.180258 -0.31921 0.05
+  name "wooden box(1)"
+  size 0.1 0.1 0.1
+}
+WoodenBox {
+  translation 0.0601555 0.186937 0.05
+  name "wooden box(2)"
+  size 0.1 0.1 0.1
+}
+E-puck {
+  hidden position_0_0 1668.2791431046985
+  hidden position_0_1 2181.327968058164
+  hidden rotation_1 0 -0.9999999999999999 0 3.0481486050714977
+  hidden rotation_2 0 -1 0 5.2205188403320335
+  translation 0.228247 0.321569 -2.85449e-05
+  rotation -0.0015600240121251214 -0.0015600229272551465 -0.9999975663238126 1.5707987642165888
+}
+Solid {
+  translation 0.02929629734098926 0.015288478461763408 0.09671263744728362
+  rotation -0.678024475951565 0.3697652884374576 -0.6352609239339135 1.8989174943013627
+  children [
+    Shape {
+      appearance DEF lato PBRAppearance {
+        baseColorMap ImageTexture {
+          url [
+            "../../asset_webots/red_brick_wall.jpg"
+          ]
+        }
+      }
+      geometry DEF BALL_GEOMETRY Sphere {
+        radius 0.1
+      }
+    }
+  ]
+  name "Ball"
+  boundingObject USE BALL_GEOMETRY
+  physics Physics {
+  }
+  linearVelocity 0 0 3.5278843661545357e-16
+}
+Solid {
+  translation -0.30427181316619606 0.2925546864698338 0.09671263744728362
+  rotation 0.2667892603046046 -0.08774316500409053 0.9597523782628448 2.7263624716471577
+  children [
+    Shape {
+      appearance USE lato
+      geometry DEF BALL_GEOMETRY Sphere {
+        radius 0.1
+      }
+    }
+  ]
+  name "Ball 2"
+  boundingObject USE BALL_GEOMETRY
+  physics Physics {
+  }
+  linearVelocity 0 0 3.5282718929298703e-16
+}
+Solid {
+  translation 0.00707155 -0.474291 2.88658e-15
+  children [
+    DEF WALL Shape {
+      appearance DEF BLUE_WALL PBRAppearance {
+        baseColor 0 0.0509804 1
+        roughness 0.5
+        metalness 0
+      }
+      geometry Box {
+        size 1 0.05 0.1
+      }
+    }
+  ]
+  name "Wall"
+}
+Solid {
+  translation -0.00153917 0.476799 0
+  children [
+    USE WALL
+  ]
+  name "Wall 2"
+}
+Solid {
+  translation 0.484017 0.000280425 -8.88178e-16
+  rotation 0 0 1 1.5708
+  children [
+    USE WALL
+  ]
+  name "Wall 3"
+}
+Solid {
+  translation -0.476242 0.000147187 -1.5099e-14
+  rotation 0 0 1 -1.5707953071795862
+  children [
+    USE WALL
+  ]
+  name "Wall 4"
+}

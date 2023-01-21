@@ -1,0 +1,114 @@
+#VRML_SIM R2023a utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/factory/containers/protos/WoodenBox.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/robots/gctronic/e-puck/protos/E-puck.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/floors/protos/Floor.proto"
+
+WorldInfo {
+  basicTimeStep 16
+}
+Viewpoint {
+  orientation 0.09377492907923034 -0.9918026039038156 -0.08679779701004108 5.414535858592426
+  position -1.0867359677460562 0.14629445011882328 1.5116029387003393
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+Floor {
+  size 1 1
+}
+WoodenBox {
+  translation -0.317191 -0.194662 0.05
+  size 0.1 0.1 0.1
+}
+WoodenBox {
+  translation 0.180258 -0.31921 0.05
+  name "wooden box(1)"
+  size 0.1 0.1 0.1
+}
+WoodenBox {
+  translation 0.0601555 0.186937 0.05
+  name "wooden box(2)"
+  size 0.1 0.1 0.1
+}
+E-puck {
+  translation -0.0257051 -0.151482 -3.19867e-05
+  rotation -0.0007721572141391234 -0.001810202530818516 0.999998063468142 -0.7940482627781922
+}
+Solid {
+  translation 0.147423 -0.0204554 0.0967126
+  rotation 0.2586760526646038 0.9452479888582547 0.19897974604789256 -2.711090005436806
+  children [
+    Shape {
+      appearance PBRAppearance {
+        roughness 1
+        metalness 0
+      }
+      geometry DEF BALL_GEOMETRY Sphere {
+        radius 0.1
+      }
+    }
+  ]
+  name "Ball"
+  boundingObject USE BALL_GEOMETRY
+  physics Physics {
+  }
+}
+Solid {
+  translation -0.244042 0.0710613 0.0967126
+  rotation 0.2586760526646038 0.9452479888582547 0.19897974604789256 -2.711090005436806
+  children [
+    Shape {
+      appearance PBRAppearance {
+        roughness 1
+        metalness 0
+      }
+      geometry DEF BALL_GEOMETRY Sphere {
+        radius 0.1
+      }
+    }
+  ]
+  name "Ball 2"
+  boundingObject USE BALL_GEOMETRY
+  physics Physics {
+  }
+}
+Solid {
+  translation -0.00332858 -0.482199 0
+  children [
+    DEF WALL Shape {
+      appearance PBRAppearance {
+      }
+      geometry Box {
+        size 1 0.05 0.1
+      }
+    }
+  ]
+  name "Wall"
+}
+Solid {
+  translation -0.00153917 0.476799 0
+  children [
+    USE WALL
+  ]
+  name "Wall 2"
+}
+Solid {
+  translation 0.47324 -0.0013559 0
+  rotation 0 0 1 1.5708
+  children [
+    USE WALL
+  ]
+  name "Wall 3"
+}
+Solid {
+  translation -0.476242 0.000147187 -1.5099e-14
+  rotation 0 0 1 -1.5707953071795862
+  children [
+    USE WALL
+  ]
+  name "Wall 4"
+}

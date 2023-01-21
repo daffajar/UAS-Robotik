@@ -1,0 +1,44 @@
+#VRML_SIM R2023a utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/floors/protos/RectangleArena.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/robots/sphero/bb8/protos/BB-8.proto"
+
+WorldInfo {
+}
+Viewpoint {
+  orientation -0.20984083198543615 0.5568242087055043 0.8036875175285161 0.8769403880578629
+  position -2.581273612263765 -3.246643389606292 3.5610272255707107
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+RectangleArena {
+  floorSize 10 10
+}
+BB-8 {
+  hidden position_0_0 1.9797125789062184
+  hidden position_0_1 1.979713716369532
+  hidden linearVelocity_0 -0.004181597086805001 0.0012389381129724393 0.0002891558783418586
+  hidden angularVelocity_0 -0.009765888659129633 -0.0329644779105555 1.4688668154888946e-05
+  hidden rotation_3 0 0 1 1.9797125789062184
+  hidden position_3_0 12.642841077879066
+  hidden linearVelocity_3 -0.008285135318657082 0.0024545663443158905 8.049890778848319e-05
+  hidden angularVelocity_3 -0.009763032922410833 -0.03295695801097678 -2.989214730475432e-07
+  hidden rotation_4 0 1 0 0.07647046351989334
+  hidden linearVelocity_4 -0.008273892517345751 0.002451246750453271 7.971424732981787e-05
+  hidden angularVelocity_4 -0.009764663788652844 -0.032958877501415934 -3.41929376182433e-07
+  hidden rotation_7 0 0 1 1.979713716369532
+  hidden linearVelocity_7 -0.017357870415813256 0.005142220665897218 -0.00037651065858701184
+  hidden angularVelocity_7 -0.009766323109770986 -0.03296650486393579 1.082203013151942e-05
+  translation 2.183617466063547 0.6528807626350361 -0.04133341685811838
+  rotation 0.015598727066854516 -0.021021518196260074 -0.9996573290316128 1.8508620372444602
+  controller "<none>"
+}
+Robot {
+  name "supervisor"
+  controller "supervisor"
+  supervisor TRUE
+}
